@@ -1,0 +1,20 @@
+@model atividade_cadastrar_aluno_uni9.Models.Aluno
+
+@{
+    ViewData["Title"] = "Confirmação";
+}
+
+<div class="alert alert-success" role="alert">
+    Aluno cadastrado com sucesso!
+</div>
+
+<h2>Dados do aluno</h2>
+<ul class="list-group mb-3">
+    <li class="list-group-item"><strong>Nome:</strong> @Model.Nome</li>
+    <li class="list-group-item"><strong>E-mail:</strong> @Model.Email</li>
+    <li class="list-group-item"><strong>RA:</strong> @Model.RA</li>
+    <li class="list-group-item"><strong>Curso:</strong> @Model.Curso</li>
+    <li class="list-group-item"><strong>Data de Nascimento:</strong> @Model.DataNascimento?.ToString("dd/MM/yyyy")</li>
+</ul>
+
+<a asp-action="Cadastrar" class="btn btn-outline-primary">Cadastrar outro</a>
